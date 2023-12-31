@@ -16,13 +16,14 @@
 - Spring Cloud Config
 - Spring Cloud Bus
 - RabbitMQ
-- Spring Reactive Gateway 
+- Spring Reactive Gateway
 
 ## Descripción de microservicios
 - **product-microservice**: Servicio que se conecta a MongoDB, inserta un producto y trae una lista de productos. Además tiene Eureka Client.
 - **booking-microservice**: Servicio que se conecta a MySql. Además tiene Eureka Client.
 - **discovery-service**: Servicio que funciona con Spring Cloud Eureka, el cual es el servidor. Detalla los servicios disponibles.
 - **config-server**: Se comunica con los archivos de ```service-configuration``` para traer propiedades de GitHub.
+- **api-gateway**: Servicio que se encarga de orquestar las consultas, toma los endpoints desde Eureka Server y envia la petición donde corresponde.
 
 ## Uso de HashiCorp Vault
 Para usar esta herramientas necesitamos descargar el software desde: [HashiCorp Vault](https://developer.hashicorp.com/vault/install?product_intent=vault)
