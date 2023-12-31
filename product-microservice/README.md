@@ -13,6 +13,8 @@ Microservicio que sirve conectar con MongoDB para poder insertar y listar regist
 - Maven v4
 - Netflix Eureka Client 4.1.0
 - Lombok
+- Spring Cloud Config Client 4.1.0
+- Spring Cloud Starter Bootstrap 4.1.0
 
 ## URL
 - GET: http://localhost:8080/api/products

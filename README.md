@@ -7,3 +7,4 @@
 - product-microservice: Servicio que se conecta a MongoDB, inserta un producto y trae una lista de productos. Además tiene Eureka Client.
 - booking-microservice: Servicio que se conecta a MySql. Además tiene Eureka Client.
 - discovery-service: Servicio que funciona con Spring Cloud Eureka, el cual es el servidor. Detalla los servicios disponibles.
+- config-server: Se comunica con los archivos de ```service-configuration``` para traer propiedades de GitHub.

@@ -5,10 +5,12 @@
 # Microservicio con Spring Boot a MySQL
 
 ## Descripción
-Microservicio que sirve solo para establecer conexión con MySQL.
+Microservicio que sirve solo para establecer conexión con MySQL y obtener propiedades del config server.
 
 ## Versiones
 - Spring Boot 3.2.1
 - Java v17
 - Maven v4
 - Netflix Eureka Client 4.1.0
+- Spring Cloud Config Client 4.1.0
+- Spring Cloud Starter Bootstrap 4.1.0
