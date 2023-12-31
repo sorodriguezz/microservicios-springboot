@@ -17,9 +17,11 @@ Microservicio que sirve conectar con MongoDB para poder insertar y listar regist
 - Spring Cloud Starter Bootstrap 4.1.0
 - Spring Boot Starter Actuator 3.2.1
 - Spring Cloud Starter Vault Config 4.1.0
+- Spring Cloud Starter Bus AMQP 4.1.0
 
 ## URL
 - GET: http://localhost:8080/api/products
 - POST: http://localhost:8080/api/products
-- POST: http://localhost:54306/actuator/refresh (Actualiza properties)
-- GET: http://localhost:54306/api/categories/test-prop
+- POST: http://localhost:51386/actuator/refresh (Actualiza properties)
+- GET: http://localhost:51386/api/categories/test-prop
+- GET: http://localhost:51386/actuator/busrefresh (Actualiza las properties de todos los ms a traves de RabbitMQ)

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://spring.io/projects/spring-boot/" target="blank"><img src="https://avatars.githubusercontent.com/u/7815877?s=200&v=4" width="500" alt="SpringBoot Logo" /></a>
+  <a href="https://spring.io/projects/spring-boot/" target="blank"><img src="https://user-images.githubusercontent.com/33158051/103925017-e7673b80-50e4-11eb-9379-ceb82e3f382c.png" width="200" alt="SpringBoot Logo" /></a>
 </p>
 
 # Microservicio con Spring Cloud

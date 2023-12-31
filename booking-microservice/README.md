@@ -15,4 +15,5 @@ Microservicio que sirve solo para establecer conexión con MySQL y obtener propi
 - Spring Cloud Config Client 4.1.0
 - Spring Cloud Starter Bootstrap 4.1.0
 - Spring Boot Starter Actuator 3.2.1
-- Spring Cloud Starter Vault Config 4.1.0
+- Spring Cloud Starter Vault Config 4.1.0 
+- Spring Cloud Starter Bus AMQP 4.1.0
