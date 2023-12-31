@@ -5,6 +5,15 @@
 
 # Intensivo de herramientas Spring
 
+## Implemtaciones
+- Spring Boot
+- MongoDB
+- MySQL
+- Discovery Server
+- Config Server
+- Secrets en Vault (HashiCrop Vault)
+- Actuator @RefreshScope
+
 ## Descripción de microservicios
 - **product-microservice**: Servicio que se conecta a MongoDB, inserta un producto y trae una lista de productos. Además tiene Eureka Client.
 - **booking-microservice**: Servicio que se conecta a MySql. Además tiene Eureka Client.
