@@ -47,10 +47,32 @@ $ vault kv put secret/booking-microservice @booking-microservice.json
 El ```@booking-microservice.json``` es nuestro archivo de configuraciones.
 
 ## RabbitMQ con Docker
-Para instalar Rabbit en local, usaremos docker. Donde usamos el comando:
+Para instalar [RabbitMQ](https://www.rabbitmq.com/download.html) en local, usaremos docker. Donde usamos el comando:
 ```=bash
 $ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
 ```
+
+## Auth Server Keycloak con Docker y configuración
+Para instalar el servidor de [keycloak](https://www.keycloak.org/getting-started/getting-started-docker) en local, usaremos docker con el siguiente comando:
+```=bash
+$ docker run -p 9090:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.3 start-dev
+```
+Para ir al dashboard visitaremos ```http://localhost:9090/admin```
+Donde la contraseña es ```admin``` y el usuario es ```admin```
+
+Para crear un ```realm``` (tenant) vamos sobre donde dice "master" y le damos en **Create realm**. Esto permite crear un grupos aislados de aplicaciones y usuarios. (No se deberia usar el realm Master, ese es solo para Keycloak)
+
+- Al crearlo le ponemos un nombre al realm y damos en crear.
+- Para crear un cliente, vamos al menú lateral izquiedo donde dice **Clients**.
+- Le damos un **Client ID**, en este caso le pondremos **spring-cloud-gateway-client**.
+- En name pondremos **Api Gateway**.
+- En **Capability config** pondremos check en **Authorization** y **Client authentication**.
+- En **Login settings** para **Valid redirect URIs** pondremos ```http://localhost:8080/login/oauth2/code/spring-cloud-gateway-client``` para usar el gateway como autenticación con ouath2.
+- Le damos **save** y en el apartado Credentials copiamos nuestro **Client Secret**.
+- Luego crearemos un usuario en el apartado **Users** del mení lateral izquierdo. Completamos los datos y lo creamos.
+- Una vez creado, vamos al apartado **Credentials** y seteamos una contraseña para el usuario creado.
+- Luego para tomar las configuraciones para conectarnos al realme con SpringBoot, vamos a **Realm settings** en el manú y abrimos el link de **OpenID Endpoint Configuration**
+
 ## Motores de base de datos con Docker
 Estos motores de base de datos los usaremos con docker, donde los levantaremos con los archivos ```YML``` de docker compose. Antes debes tener instalar [Docker](https://www.docker.com/products/docker-desktop/) en tu equipo.
 ```=bash

@@ -13,6 +13,8 @@ Microservicio que sirve como gateway entre el cliente y nuestros microservicios.
 - Maven v4
 - Spring Reactive Gateway
 - NettyWebServer
+- Spring Cloud Starter Security 2.2.5
+- Spring Boot Starter OAuth2 Client 3.2.1
 
 ## URL
 - GET: http://localhost:8080/api/products

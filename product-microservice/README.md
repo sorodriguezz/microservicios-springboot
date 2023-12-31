@@ -18,6 +18,10 @@ Microservicio que sirve conectar con MongoDB para poder insertar y listar regist
 - Spring Boot Starter Actuator 3.2.1
 - Spring Cloud Starter Vault Config 4.1.0
 - Spring Cloud Starter Bus AMQP 4.1.0
+- Spring Security OAuth2 Resource Server 6.2.1
+- Spring Security OAuth2 Jose 6.2.1
+- Spring Boot Starter Security 3.2.1
+- Spring Security Config
 
 ## URL
 - GET: http://localhost:8080/api/products
