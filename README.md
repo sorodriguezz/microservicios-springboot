@@ -5,7 +5,7 @@
 
 # Intensivo de herramientas Spring
 
-## Implemtaciones
+## Implemetaciones
 - Spring Boot
 - MongoDB
 - MySQL
@@ -17,6 +17,7 @@
 - Spring Cloud Bus
 - RabbitMQ
 - Spring Reactive Gateway
+- Auth Server KeyCloak
 
 ## Descripción de microservicios
 - **product-microservice**: Servicio que se conecta a MongoDB, inserta un producto y trae una lista de productos. Además tiene Eureka Client.
@@ -45,8 +46,14 @@ $ vault kv put secret/booking-microservice @booking-microservice.json
 ```
 El ```@booking-microservice.json``` es nuestro archivo de configuraciones.
 
-## RabbitMQ
+## RabbitMQ con Docker
 Para instalar Rabbit en local, usaremos docker. Donde usamos el comando:
 ```=bash
 $ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
+```
+## Motores de base de datos con Docker
+Estos motores de base de datos los usaremos con docker, donde los levantaremos con los archivos ```YML``` de docker compose. Antes debes tener instalar [Docker](https://www.docker.com/products/docker-desktop/) en tu equipo.
+```=bash
+$ docker compose -f docker/docker-compose-mongodb.yml up -d
+$ docker compose -f docker/docker-compose-mysql.yml up -d
 ```
