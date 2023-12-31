@@ -14,3 +14,4 @@ Microservicio que sirve solo para establecer conexión con MySQL y obtener propi
 - Netflix Eureka Client 4.1.0
 - Spring Cloud Config Client 4.1.0
 - Spring Cloud Starter Bootstrap 4.1.0
+- Spring Boot Starter Actuator 3.2.1

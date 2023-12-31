@@ -15,7 +15,10 @@ Microservicio que sirve conectar con MongoDB para poder insertar y listar regist
 - Lombok
 - Spring Cloud Config Client 4.1.0
 - Spring Cloud Starter Bootstrap 4.1.0
+- Spring Boot Starter Actuator 3.2.1
 
 ## URL
 - GET: http://localhost:8080/api/products
 - POST: http://localhost:8080/api/products
+- POST: http://localhost:54306/actuator/refresh (Actualiza properties)
+- GET: http://localhost:54306/api/categories/test-prop
