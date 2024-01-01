@@ -49,7 +49,7 @@ El ```@booking-microservice.json``` es nuestro archivo de configuraciones.
 ## RabbitMQ con Docker
 Para instalar [RabbitMQ](https://www.rabbitmq.com/download.html) en local, usaremos docker. Donde usamos el comando:
 ```=bash
-$ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
+$ docker run -it --rm -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
 ```
 
 ## Auth Server Keycloak con Docker y configuración
