@@ -18,13 +18,16 @@
 - RabbitMQ
 - Spring Reactive Gateway
 - Auth Server KeyCloak
+- Circuit Breaker
+- Resilence4j
 
 ## Descripción de microservicios
 - **product-microservice**: Servicio que se conecta a MongoDB, inserta un producto y trae una lista de productos. Además tiene Eureka Client.
-- **booking-microservice**: Servicio que se conecta a MySql. Además tiene Eureka Client.
+- **booking-microservice**: Servicio que se conecta a MySql. Además tiene Eureka Client y Circuit Breaker.
 - **discovery-service**: Servicio que funciona con Spring Cloud Eureka, el cual es el servidor. Detalla los servicios disponibles.
 - **config-server**: Se comunica con los archivos de ```service-configuration``` para traer propiedades de GitHub.
 - **api-gateway**: Servicio que se encarga de orquestar las consultas, toma los endpoints desde Eureka Server y envia la petición donde corresponde.
+- **stock-microservice**: Tiene la conexion a MySQL, con un endpoint para buscar un codigo.
 
 ## Uso de HashiCorp Vault
 Para usar esta herramientas necesitamos descargar el software desde: [HashiCorp Vault](https://developer.hashicorp.com/vault/install?product_intent=vault)
@@ -43,8 +46,10 @@ $ vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
 - Para agregar un nuevo archivo de secretos a nuestro vault agregamos con el comando:
 ```=bash
 $ vault kv put secret/booking-microservice @booking-microservice.json
+$ vault kv put secret/product-microservice @product-microservice.json
+$ vault kv put secret/stock-microservice @stock-microservice.json
 ```
-El ```@booking-microservice.json``` es nuestro archivo de configuraciones.
+El ```@booking-microservice.json``` es nuestro archivo de configuraciones, posicionate dentro de la carpeta secrets.
 
 ## RabbitMQ con Docker
 Para instalar [RabbitMQ](https://www.rabbitmq.com/download.html) en local, usaremos docker. Donde usamos el comando:
