@@ -84,3 +84,8 @@ Estos motores de base de datos los usaremos con docker, donde los levantaremos c
 $ docker compose -f docker/docker-compose-mongodb.yml up -d
 $ docker compose -f docker/docker-compose-mysql.yml up -d
 ```
+
+## Diagrama de componentes
+![Springboot](https://github.com/sorodriguezz/microservicios-springboot/blob/master/diagrama-springboot.png)
+
+Enlace de los videos seguidos: [Youtube](https://www.youtube.com/watch?v=-ksmE3KoX9U&list=PL145AyWAbMDhwUbBL74s1D2ZV9EqBaQ1t)
